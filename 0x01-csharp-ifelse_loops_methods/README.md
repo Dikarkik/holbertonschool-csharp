@@ -60,11 +60,11 @@ Adds two integers and returns the result.
 
 ### [10-print_line](./10-print_line)
 - Draws a straight line in the terminal.
-- Where length is the `number` of times the character `_` should be printed.
+- Where `length` is the number of times the character `_` should be printed.
 
 ### [11-print_diagonal](./11-print_diagonal)
 - Draws a diagonal line in the terminal.
-- Where length is the `number` of times the character `\` should be printed.
+- Where `length` is the number of times the character `\` should be printed.
 
 ### [12-fizzbuzz](./12-fizzbuzz)
 - Prints the numbers from 1 to 100 separated by a space.
