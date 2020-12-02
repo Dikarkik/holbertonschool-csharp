@@ -7,7 +7,6 @@ class Program
         int[,] matrix = new int[5, 5];
 
         matrix[2, 2] = 1;
-        matrix[4, 4] = 8;
 
         for (int y = 0; y < matrix.GetLength(0); y++)
         {
