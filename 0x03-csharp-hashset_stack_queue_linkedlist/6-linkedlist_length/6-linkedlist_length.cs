@@ -10,12 +10,11 @@ class LList
         LinkedListNode<int> current = myLList.First;
         int count = 0;
 
-        do
+        while (current != null)
         {
             count++;
             current = current.Next;
         }
-        while (current != null);
 
         return count;
     }
