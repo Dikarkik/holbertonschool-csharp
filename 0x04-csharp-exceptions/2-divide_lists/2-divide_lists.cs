@@ -6,9 +6,8 @@ class List
     public static List<int> Divide(List<int> list1, List<int> list2, int listLength)
     {
         List<int> result = new List<int>();
-        int len = Math.Max(list1.Count, list2.Count);
 
-        for (int i = 0; i < len; i++)
+        for (int i = 0; i < listLength; i++)
         {
             try
             {
