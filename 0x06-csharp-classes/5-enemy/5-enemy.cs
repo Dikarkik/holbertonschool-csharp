@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace Enemies
 {
     /// <summary>
@@ -11,6 +12,15 @@ namespace Enemies
         /// </summary>
         private int health;
         private string name = "(No name)";
+
+        /// <summary>
+        /// Property of 'name'
+        /// </summary>
+        public string Name
+        {
+            get => name;
+            set => name = value;
+        }
 
         /// <summary>
         /// Default Constructor
@@ -33,15 +43,6 @@ namespace Enemies
         }
 
         /// <summary>
-        /// Property of 'name'
-        /// </summary>
-        public string Name
-        {
-            get => name;
-            set => name = value;
-        }
-
-        /// <summary>
         /// Method that retrieves the value of 'health'
         /// </summary>
         public int GetHealth() => health;
@@ -51,7 +52,7 @@ namespace Enemies
         /// </summary>
         public override string ToString()
         {
-            return $"Zombie name: {name} / Total Health: {health}";
+            return $"Zombie Name: {name} / Total Health: {health}";
         }
     }
 }
