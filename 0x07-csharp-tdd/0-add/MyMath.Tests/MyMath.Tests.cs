@@ -1,16 +1,10 @@
 using NUnit.Framework;
-using MyMath;
 
 namespace MyMath.Tests
 {
     [TestFixture]
     public class Tests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
         public void Test_Add_positive_numbers()
         {
