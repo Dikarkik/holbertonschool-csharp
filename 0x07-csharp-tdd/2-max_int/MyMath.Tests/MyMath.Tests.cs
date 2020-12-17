@@ -28,5 +28,19 @@ namespace MyMath.Tests
             nums = new List<int>() {-1, 0, 1};
             Assert.AreEqual(Operations.Max(nums), 1);
         }
+
+        [Test]
+        public void Test_Max_empty_list()
+        {
+            nums = new List<int>() { };
+            Assert.AreEqual(Operations.Max(nums), 0);
+        }
+
+        [Test]
+        public void Test_Max_null_list()
+        {
+            nums = null;
+            Assert.AreEqual(Operations.Max(nums), 0);
+        }
     }
 }
