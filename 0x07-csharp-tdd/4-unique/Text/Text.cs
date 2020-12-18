@@ -18,27 +18,40 @@ namespace Text
         public static int UniqueChar(string s)
         {
             int repetitions = 1;
-            char currentChar = s[0];
+            char currentChar;
 
-            for (int i = 1; i < s.Length; i++)
+            try
             {
-                if (s[i] == currentChar)
+                currentChar = s[0];
+
+                for (int i = 1; i < s.Length; i++)
                 {
-                    repetitions++;
+                    if (s[i] == currentChar)
+                    {
+                        repetitions++;
+                    }
+                    else if (s[i] != currentChar && repetitions == 1)
+                    {
+                        return i - 1;
+                    }
+                    else if (s[i] != currentChar && i == s.Length - 1)
+                    {
+                        return i;
+                    }
+                    else if (s[i] != currentChar)
+                    {
+                        currentChar = s[i];
+                        repetitions = 1;
+                    }
                 }
-                else if (s[i] != currentChar && repetitions == 1)
-                {
-                    return i - 1;
-                }
-                else if (s[i] != currentChar && i == s.Length - 1)
-                {
-                    return i;
-                }
-                else if (s[i] != currentChar)
-                { 
-                    currentChar = s[i];
-                    repetitions = 1;
-                }
+            }
+            catch (IndexOutOfRangeException)
+            {
+                return -1;
+            }
+            catch (NullReferenceException)
+            {
+                return -1;
             }
 
             return -1;
