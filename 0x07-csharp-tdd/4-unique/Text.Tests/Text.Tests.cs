@@ -12,7 +12,7 @@ namespace Text.Tests
         [TestCase("aabbcc", -1)]
         [TestCase("", -1)]
         [TestCase(null, -1)]
-        public void Test_UniqueChar_in_the_middle(string s, int index)
+        public void Test_UniqueChar(string s, int index)
         {
             Assert.AreEqual(Str.UniqueChar(s), index);
         }
