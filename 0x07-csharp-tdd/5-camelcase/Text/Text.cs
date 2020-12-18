@@ -16,13 +16,25 @@ namespace Text
         public static int CamelCase(string s)
         {
             int count = 0;
+            bool canCount = false;
 
-            for (int i = 0; i < s.Length; i++)
-            { 
-                if (Char.IsUpper(s[i]))
-                    count++;
+            try
+            {
+                for (int i = 0; i < s.Length; i++)
+                {
+                    if (canCount == false && Char.IsLower(s[i]))
+                    {
+                        canCount = true;
+                        count++;
+                    }
+                    else if (canCount == true && Char.IsUpper(s[i]))
+                        count++;
+                }
             }
-
+            catch (NullReferenceException)
+            { 
+                return count;
+            }
             return count;
         }
     }
