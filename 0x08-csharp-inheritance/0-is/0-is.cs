@@ -10,9 +10,6 @@ public class Obj
     /// </summary>
     public static bool IsOfTypeInt(object obj)
     {
-        if (obj.GetType() == typeof(int))
-            return true;
-
-        return false;
+        return obj.GetType() == typeof(int);
     }
 }

@@ -12,9 +12,6 @@ public class Obj
     /// </summary>
     public static bool IsInstanceOfArray(object obj)
     {
-        if (obj is Array)
-            return true;
-
-        return false;
+        return obj is Array;
     }
 }

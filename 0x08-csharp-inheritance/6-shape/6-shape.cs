@@ -22,6 +22,9 @@ public class Rectangle : Shape
     private int width;
     private int height;
 
+    /// <summary>
+    /// Property for width
+    /// </summary>
     public int Width
     {
         get => width;
@@ -34,6 +37,9 @@ public class Rectangle : Shape
         }
     }
 
+    /// <summary>
+    /// Property for height
+    /// </summary>
     public int Height
     {
         get => height;

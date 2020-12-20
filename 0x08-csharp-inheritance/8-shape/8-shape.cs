@@ -22,6 +22,9 @@ public class Rectangle : Shape
     private int width;
     private int height;
 
+    /// <summary>
+    /// Property for width
+    /// </summary>
     public int Width
     {
         get => width;
@@ -34,6 +37,9 @@ public class Rectangle : Shape
         }
     }
 
+    /// <summary>
+    /// Property for height
+    /// </summary>
     public int Height
     {
         get => height;
@@ -46,11 +52,17 @@ public class Rectangle : Shape
         }
     }
 
+    /// <summary>
+    /// Method that returns the area of the object
+    /// </summary>
     public new int Area()
     {
         return width * height;
     }
 
+    /// <summary>
+    /// Method that returns the string representation
+    /// </summary>
     public override string ToString()
     {
         return $"[Rectangle] {width} / {height}";
@@ -65,6 +77,9 @@ public class Square : Rectangle
 {
     private int size;
 
+    /// <summary>
+    /// Property for size
+    /// </summary>
     public int Size
     {
         get => size;
