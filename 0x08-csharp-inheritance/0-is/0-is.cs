@@ -1,9 +1,7 @@
-﻿using System;
-
-/// <summary>
+﻿/// <summary>
 /// This class defines operations for type checking
 /// </summary>
-class Obj
+public class Obj
 {
     /// <summary>
     /// method that checks if an object is type int
