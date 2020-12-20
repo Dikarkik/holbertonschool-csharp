@@ -14,11 +14,32 @@ class Program
 
         Console.WriteLine("------------------");
 
+        // Square aSquare = new Square();
+        // aSquare.Size = 12;
+        // Console.WriteLine("aSquare width: {0}", aSquare.Width);
+        // Console.WriteLine("aSquare height: {0}", aSquare.Height);
+        // Console.WriteLine("aSquare area: {0}", aSquare.Area());
+        // Console.WriteLine(aSquare.ToString());
+
+        Console.WriteLine("------------------");
+
         Square aSquare = new Square();
-        aSquare.Size = 12;
-        Console.WriteLine("aSquare width: {0}", aSquare.Width);
-        Console.WriteLine("aSquare height: {0}", aSquare.Height);
-        Console.WriteLine("aSquare area: {0}", aSquare.Area());
-        Console.WriteLine(aSquare.ToString());
+
+        try
+        {
+            aSquare.Width = 12;
+            aSquare.Height = 8;
+            aSquare.Size = 8;
+
+            Console.WriteLine("aSquare width: {0}", aSquare.Width);
+            Console.WriteLine("aSquare height: {0}", aSquare.Height);
+            Console.WriteLine("aSquare size: {0}", aSquare.Size);
+            Console.WriteLine("aSquare area: {0}", aSquare.Area());
+            Console.WriteLine(aSquare.ToString());
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+        }
     }
 }

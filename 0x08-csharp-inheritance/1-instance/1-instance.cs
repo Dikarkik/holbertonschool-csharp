@@ -3,7 +3,7 @@
 /// <summary>
 /// This class defines operations for inheritance checking
 /// </summary>
-class Obj
+public class Obj
 {
     /// <summary>
     /// method to checks if 'obj' is in the inheritance tree of 'Array'
