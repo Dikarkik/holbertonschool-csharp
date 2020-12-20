@@ -8,8 +8,8 @@ class Program
         aRect.Width = 7;
         aRect.Height = 4;
         Console.WriteLine($"{nameof(aRect)} is of type: {aRect.GetType()}");
-        Console.WriteLine("Area: {0}", aRect.Area());
         Console.WriteLine(aRect.ToString());
+        Console.WriteLine("Area: {0}", aRect.Area());
         
         Console.WriteLine("\n------------------\n");
 
@@ -17,7 +17,7 @@ class Program
         // aShape.Width = 7; can't do this :(
         // aShape.Height = 4; can't do this :(
         Console.WriteLine($"{nameof(aShape)} is of type: {aShape.GetType()}");
-        Console.WriteLine("Area: {0}", aShape.Area());
         Console.WriteLine(aShape.ToString());
+        Console.WriteLine("Area: {0}", aShape.Area());
     }
 }
