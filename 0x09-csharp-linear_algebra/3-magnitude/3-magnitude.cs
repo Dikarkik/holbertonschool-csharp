@@ -9,7 +9,7 @@ public class VectorMath
 	/// Method that calculates and returns the length of a given vector (2D and 3D).
 	/// The result is rounded to the nearest tenth.
 	/// </summary>
-	/// <param name="vector"></param>
+	/// <param name="vector">double[] with 2 or 3 values</param>
 	/// <returns>The length of a given vector. -1 if the vector is not 2D or 3D</returns>
 	public static double Magnitude(double[] vector)
 	{
