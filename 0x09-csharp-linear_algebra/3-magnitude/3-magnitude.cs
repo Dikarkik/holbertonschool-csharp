@@ -10,7 +10,7 @@ public class VectorMath
 	/// The result is rounded to the nearest tenth.
 	/// </summary>
 	/// <param name="vector">double[] with 2 or 3 values</param>
-	/// <returns>The length of a given vector. -1 if the vector is not 2D or 3D</returns>
+	/// <returns>The length of vector. If the vector is not a 2D or 3D vector, return -1</returns>
 	public static double Magnitude(double[] vector)
 	{
 		if (vector.Length == 2)
