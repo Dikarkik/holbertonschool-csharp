@@ -19,9 +19,9 @@ class MatrixMath
 		if (matrix1.GetLength(0) != matrix2.GetLength(0) || matrix1.GetLength(1) != matrix2.GetLength(1))
 			return new double[1, 1] { { -1 } };
 
-		double[,] sum = new double[matrix1.GetLength(0), matrix1.GetLength(1)];
 		var len_y = matrix1.GetLength(0);
 		var len_x = matrix1.GetLength(1);
+		double[,] sum = new double[len_y, len_x];
 
 		for (int y = 0; y < len_y; y++)
 		{
