@@ -12,7 +12,7 @@ class MatrixMath
 	public static double[,] Add(double[,] matrix1, double[,] matrix2)
 	{
 		// If matrix1 is not a 2D or 3D matrix
-		if (matrix1.GetLength(1) < 2 || matrix1.GetLength(1) > 3)
+		if (matrix1.GetLength(0) < 2 || matrix1.GetLength(0) > 3 || matrix1.GetLength(0) != matrix1.GetLength(1))
 			return new double[1, 1] { { -1 } };
 
 		// If both matrices are not the same size
