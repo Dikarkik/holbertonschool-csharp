@@ -29,6 +29,12 @@ class Program
 		matrix2 = new double[1, 3] { { 1, 2, 3 } };
 		res = MatrixMath.Multiply(matrix1, matrix2); // (4, 8, 12) (5, 10, 15) (6, 12, 18)
 		PrintMatrix(res);
+
+		// example 5 (number of columns in matrix1 differnt of rows in matrix2)
+		matrix1 = new double[3, 1] { { 4 }, { 5 }, { 6 } };
+		matrix2 = new double[2, 2] { { 1, 2 }, { 1, 2 } };
+		res = MatrixMath.Multiply(matrix1, matrix2); // (4, 8, 12) (5, 10, 15) (6, 12, 18)
+		PrintMatrix(res);
 	}
 
 	static void PrintMatrix(double[,] matrix)
