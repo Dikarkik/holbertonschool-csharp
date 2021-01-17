@@ -13,14 +13,14 @@ class MatrixMath
 	/// <returns>The resulting matrix. If the matrix is of an invalid size, return a matrix containing -1</returns>
 	public static double[,] Rotate2D(double[,] matrix, double angle)
 	{
-		double[,] result, rotatedMatrix;
+		double[,] result, rotationMatrix;
 
 		// If 'matrix' is not a 2D matrix
 		if (matrix.GetLength(0) != 2 && matrix.GetLength(1) != 2)
 			return new double[,] { { -1 } };
 
-		// 'rotatedMatrix' is used in the process to rotate 'matrix'
-		rotatedMatrix = GetRotatedMatrix(angle);
+		// 'rotationMatrix' is used in the process to rotate 'matrix'
+		rotationMatrix = GetRotationMatrix(angle);
 
 		result = new double[2, 2];
 
@@ -29,7 +29,7 @@ class MatrixMath
 		{
 			for (int x = 0; x < 2; x++)
 			{
-				result[y, x] = MultiplyColAndRow(rotatedMatrix, matrix, x, y);
+				result[y, x] = Math.Round(MultiplyColAndRow(rotationMatrix, matrix, x, y), 2);
 			}
 		}
 
@@ -40,16 +40,16 @@ class MatrixMath
 	/// Note: This matrix is used in the process to rotate an existing matrix.
 	/// The 'basis vectors' of this matrix are (0, 1) (1, 0).
 	/// Returns: The resulting 2D matrix
-	private static double[,] GetRotatedMatrix(double angle)
+	private static double[,] GetRotationMatrix(double angle)
 	{
-		double[,] rotatedMatrix = new double[2, 2];
+		double[,] rotationMatrix = new double[2, 2];
 
-		rotatedMatrix[0, 0] = Math.Round(Math.Cos(angle), 2); // vector i (x)
-		rotatedMatrix[0, 1] = Math.Round(Math.Sin(angle), 2); // vector i (y)
-		rotatedMatrix[1, 0] = -Math.Round(Math.Sin(angle), 2); // vector j (x)
-		rotatedMatrix[1, 1] = Math.Round(Math.Cos(angle), 2); // vector j (y)
+		rotationMatrix[0, 0] = Math.Round(Math.Cos(angle), 2); // vector i (x)
+		rotationMatrix[0, 1] = Math.Round(Math.Sin(angle), 2); // vector i (y)
+		rotationMatrix[1, 0] = -Math.Round(Math.Sin(angle), 2); // vector j (x)
+		rotationMatrix[1, 1] = Math.Round(Math.Cos(angle), 2); // vector j (y)
 
-		return rotatedMatrix;
+		return rotationMatrix;
 	}
 
 	// Return the dot product of the col of matrix1 and the row of matrix2
