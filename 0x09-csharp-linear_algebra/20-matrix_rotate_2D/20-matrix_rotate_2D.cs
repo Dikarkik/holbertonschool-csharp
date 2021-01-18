@@ -33,7 +33,15 @@ class MatrixMath
 			}
 		}
 
-		return result;
+		for (int y = 0; y < 2; y++)
+		{
+			for (int x = 0; x < 2; x++)
+			{
+				matrix[y, x] = result[y, x];
+			}
+		}
+
+		return matrix;
 	}
 
 	/// Method that creates a new 2D matrix and rotate their vectors in radians.

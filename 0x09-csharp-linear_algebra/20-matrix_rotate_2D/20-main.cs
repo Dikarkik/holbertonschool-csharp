@@ -9,7 +9,7 @@ class Program
 		// example 1
 		matrix = new double[2, 2] { { 1, 2 }, { 3, 4 } };
 		res = MatrixMath.Rotate2D(matrix, -1.57); // (2, -1) (4, -3)
-		PrintMatrix(res);
+		PrintMatrix(matrix);
 
 		// example 2
 		matrix = new double[2, 2] { { 1, 2 }, { 3, 4 } };
