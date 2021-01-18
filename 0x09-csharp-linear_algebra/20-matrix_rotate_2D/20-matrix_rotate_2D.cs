@@ -16,7 +16,7 @@ class MatrixMath
 		double[,] result, rotationMatrix;
 
 		// If 'matrix' is not a 2D matrix
-		if (matrix.GetLength(0) != 2 && matrix.GetLength(1) != 2)
+		if (matrix.GetLength(0) != 2 || matrix.GetLength(1) != 2)
 			return new double[,] { { -1 } };
 
 		// 'rotationMatrix' is used in the process to rotate 'matrix'
