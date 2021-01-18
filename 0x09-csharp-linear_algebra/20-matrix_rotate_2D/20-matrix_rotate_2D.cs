@@ -29,7 +29,7 @@ class MatrixMath
 		{
 			for (int x = 0; x < 2; x++)
 			{
-				result[y, x] = Math.Round(MultiplyRowAndCol(rotationMatrix, matrix, y, x), 2);
+				result[y, x] = Math.Round(MultiplyRowAndCol(matrix, rotationMatrix, y, x), 2);
 			}
 		}
 
@@ -45,9 +45,8 @@ class MatrixMath
 		double[,] rotationMatrix = new double[2, 2];
 
 		rotationMatrix[0, 0] = Math.Round(Math.Cos(angle), 2); // vector i (x)
-		rotationMatrix[1, 0] = Math.Round(Math.Sin(angle), 2); // vector i (y)
-
-		rotationMatrix[0, 1] = -Math.Round(Math.Sin(angle), 2); // vector j (x)
+		rotationMatrix[0, 1] = Math.Round(Math.Sin(angle), 2); // vector i (y)
+		rotationMatrix[1, 0] = -Math.Round(Math.Sin(angle), 2); // vector j (x)
 		rotationMatrix[1, 1] = Math.Round(Math.Cos(angle), 2); // vector j (y)
 
 		return rotationMatrix;
@@ -57,8 +56,9 @@ class MatrixMath
 	private static double MultiplyRowAndCol(double[,] matrix1, double[,] matrix2, int row, int col)
 	{
 		double sum = 0;
+		int len = matrix1.GetLength(1);
 
-		for (int i = 0; i < 2; i++)
+		for (int i = 0; i < len; i++)
 			sum += matrix1[row, i] * matrix2[i, col];
 
 		return sum;
