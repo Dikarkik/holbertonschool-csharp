@@ -7,18 +7,18 @@ class Program
 		double[,] matrix, res;
 
 		// example 1
-		matrix = new double[2, 2] { { 1, 2 }, { 3, 4 } };
-		res = MatrixMath.Rotate2D(matrix, -1.57); // (2, -1) (4, -3)
-		PrintMatrix(matrix);
+		matrix = new double[2, 2] { { 1, 3 }, { 2, 4 } };
+		res = MatrixMath.Rotate2D(matrix, -1.57); // (2, 4) (-1, -3)
+		PrintMatrix(res);
 
 		// example 2
 		matrix = new double[2, 2] { { 1, 2 }, { 3, 4 } };
-		res = MatrixMath.Rotate2D(matrix, 3); // (-1.27, -1.84) (-3.53, -3.54)
+		res = MatrixMath.Rotate2D(matrix, 3); //(-1.41, -2.54) (-2.83, -3.68)
 		PrintMatrix(res);
 
 		// example 3
 		matrix = new double[2, 2] { { 1.30, 2.12 }, { 3.98, 4.58 } };
-		res = MatrixMath.Rotate2D(matrix, 1.11); // (-1.34, 2.1) (-2.37, 5.6)
+		res = MatrixMath.Rotate2D(matrix, 1.11); // (-3.01, -3.19) (2.92, 3.92)
 		PrintMatrix(res);
 	}
 
