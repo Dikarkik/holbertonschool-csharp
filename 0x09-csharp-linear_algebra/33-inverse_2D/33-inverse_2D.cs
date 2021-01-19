@@ -1,4 +1,6 @@
-﻿/// <summary>
+﻿using System;
+
+/// <summary>
 /// Contains methods to make operations about matrices
 /// </summary>
 class MatrixMath
@@ -32,7 +34,7 @@ class MatrixMath
 		{
 			for (int x = 0; x < 2; x++)
 			{
-				result[y, x] = result[y, x] / determinant;
+				result[y, x] = Math.Round(result[y, x] / determinant, 2);
 			}
 		}
 
