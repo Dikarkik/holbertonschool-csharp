@@ -18,24 +18,4 @@ class Program
 		matrix = new double[1, 2] { { 1, 2 }};
 		Console.WriteLine(MatrixMath.Determinant(matrix)); // -1
 	}
-
-	static void PrintMatrix(double[,] matrix)
-	{
-		for (int i = 0; i < matrix.GetLength(0); i++)
-		{
-			for (int j = 0; j < matrix.GetLength(1); j++)
-			{
-				if (j == 0)
-					Console.Write("(");
-
-				Console.Write($"{matrix[i, j]}");
-
-				if (j == matrix.GetLength(1) - 1)
-					Console.WriteLine(")");
-				else
-					Console.Write(", ");
-			}
-		}
-		Console.WriteLine();
-	}
 }
