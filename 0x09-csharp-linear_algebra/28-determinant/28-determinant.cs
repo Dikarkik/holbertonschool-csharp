@@ -1,4 +1,6 @@
-﻿/// <summary>
+﻿using System;
+
+/// <summary>
 /// Contains methods to make operations about matrices
 /// </summary>
 class MatrixMath
@@ -12,7 +14,8 @@ class MatrixMath
 	{
 		if (matrix.GetLength(0) == 2 && matrix.GetLength(1) == 2)
 		{
-			return Determinant2D(matrix[0, 0], matrix[0, 1], matrix[1, 0], matrix[1, 1]);
+			double determinant = Determinant2D(matrix[0, 0], matrix[0, 1], matrix[1, 0], matrix[1, 1]);
+			return Math.Round(determinant, 2);
 		}
 
 		if (matrix.GetLength(0) == 3 && matrix.GetLength(1) == 3)
@@ -21,7 +24,7 @@ class MatrixMath
 			double part2 = matrix[0, 1] * Determinant2D(matrix[1, 0], matrix[1, 2], matrix[2, 0], matrix[2, 2]);
 			double part3 = matrix[0, 2] * Determinant2D(matrix[1, 0], matrix[1, 1], matrix[2, 0], matrix[2, 1]);
 
-			return part1 - part2 + part3;
+			return Math.Round(part1 - part2 + part3, 2);
 		}
 
 		return -1;
