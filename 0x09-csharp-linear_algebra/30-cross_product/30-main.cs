@@ -17,6 +17,11 @@ class Program
 		PrintVector(VectorMath.CrossProduct(vector1, vector2)); // (-3, 6, -3)
 
 		// example 3
+		vector1 = new double[3] { 3, -6, 7 };
+		vector2 = new double[3] { 4.5f, 7.9f, 1 };
+		PrintVector(VectorMath.CrossProduct(vector1, vector2)); // (-61.3, 28.5, 50.7)
+
+		// example 4
 		vector1 = new double[1] { 1 };
 		vector2 = new double[3] { 5, 6, 7 };
 		PrintVector(VectorMath.CrossProduct(vector1, vector2)); // (-1)

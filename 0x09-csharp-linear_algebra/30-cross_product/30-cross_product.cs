@@ -18,16 +18,15 @@ class VectorMath
 		if (vector1.Length != 3 || vector2.Length != 3)
 			return new double[1] { -1 };
 
-		result[0] = Determinant(vector1[1], vector1[2], vector2[1], vector2[2]);
-		result[1] = Determinant(vector1[0], vector1[2], vector2[0], vector2[2]);
-		result[2] = Determinant(vector1[0], vector1[1], vector2[0], vector2[1]);
+		result[0] = Operation(vector1[1], vector2[2], vector1[2], vector2[1]);
+		result[1] = Math.Abs(Operation(vector1[0], vector2[2], vector1[2], vector2[0]));
+		result[2] = Operation(vector1[0], vector2[1], vector1[1], vector2[0]);
 
 		return result;
 	}
 
-	// Example (1, 2) (3, 4) -> a = 1, b = 2, c = 3, d = 4
-	private static double Determinant(double a, double b, double c, double d)
+	private static double Operation(double a, double b, double c, double d)
 	{
-		return Math.Round((a * d) - (c * b), 2);
+		return Math.Round((a * b) - (c * d), 2);
 	}
 }
