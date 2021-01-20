@@ -29,7 +29,7 @@ class MatrixMath
 		{
 			for (int x = 0; x < 2; x++)
 			{
-				result[y, x] = Math.Round(MultiplyRowAndCol(matrix, rotationMatrix, y, x), 2);
+				result[y, x] = Math.Round(MultiplyColAndRow(rotationMatrix, matrix, x, y), 2);
 			}
 		}
 
@@ -52,14 +52,13 @@ class MatrixMath
 		return rotationMatrix;
 	}
 
-	// Return the dot product of the row of matrix1 and the col of matrix2
-	private static double MultiplyRowAndCol(double[,] matrix1, double[,] matrix2, int row, int col)
+	// Return the dot product of the col (matrix1) and the row (matrix2)
+	private static double MultiplyColAndRow(double[,] matrix1, double[,] matrix2, int col, int row)
 	{
 		double sum = 0;
-		int len = matrix1.GetLength(1);
 
-		for (int i = 0; i < len; i++)
-			sum += matrix1[row, i] * matrix2[i, col];
+		for (int i = 0; i < 2; i++)
+			sum += matrix1[i, col] * matrix2[row, i];
 
 		return sum;
 	}
