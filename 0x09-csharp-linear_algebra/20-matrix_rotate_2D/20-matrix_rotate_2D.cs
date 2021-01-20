@@ -43,10 +43,10 @@ class MatrixMath
 	{
 		double[,] rotationMatrix = new double[2, 2];
 
-		rotationMatrix[0, 0] = Math.Round(Math.Cos(angle), 2); // vector i (x)
-		rotationMatrix[0, 1] = Math.Round(Math.Sin(angle), 2); // vector i (y)
-		rotationMatrix[1, 0] = -Math.Round(Math.Sin(angle), 2); // vector j (x)
-		rotationMatrix[1, 1] = Math.Round(Math.Cos(angle), 2); // vector j (y)
+		rotationMatrix[0, 0] = Math.Cos(angle); // vector i (x)
+		rotationMatrix[0, 1] = Math.Sin(angle); // vector i (y)
+		rotationMatrix[1, 0] = -Math.Sin(angle); // vector j (x)
+		rotationMatrix[1, 1] = Math.Cos(angle); // vector j (y)
 
 		return rotationMatrix;
 	}
