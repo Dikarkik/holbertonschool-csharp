@@ -24,14 +24,13 @@ class MatrixMath
 
 		result = new double[2, 2];
 
-		// iterate 'result' matrix and ask for every 'dot product'
-		for (int y = 0; y < 2; y++)
-		{
-			for (int x = 0; x < 2; x++)
-			{
-				result[y, x] = Math.Round(MultiplyColAndRow(rotationMatrix, matrix, x, y), 2);
-			}
-		}
+		result[0, 0] = Math.Round((rotationMatrix[0, 0] * matrix[0, 0]) + (rotationMatrix[1, 0] * matrix[0, 1]), 2);
+
+		result[0, 1] = Math.Round((rotationMatrix[0, 1] * matrix[0, 0]) + (rotationMatrix[1, 1] * matrix[0, 1]), 2);
+
+		result[1, 0] = Math.Round((rotationMatrix[0, 0] * matrix[1, 0]) + (rotationMatrix[1, 0] * matrix[1, 1]), 2);
+
+		result[1, 1] = Math.Round((rotationMatrix[0, 1] * matrix[1, 0]) + (rotationMatrix[1, 1] * matrix[1, 1]), 2);
 
 		return result;
 	}
@@ -50,16 +49,5 @@ class MatrixMath
 		rotationMatrix[1, 1] = Math.Round(Math.Cos(angle), 2); // vector j (y)
 
 		return rotationMatrix;
-	}
-
-	// Return the dot product of the col (matrix1) and the row (matrix2)
-	private static double MultiplyColAndRow(double[,] matrix1, double[,] matrix2, int col, int row)
-	{
-		double sum = 0;
-
-		for (int i = 0; i < 2; i++)
-			sum += matrix1[i, col] * matrix2[row, i];
-
-		return sum;
 	}
 }
