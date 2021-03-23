@@ -8,16 +8,7 @@ public abstract class Base
 	/// <summary>
 	/// name - public property
 	/// </summary>
-	public string name;
-
-	/// <summary>
-	/// property for 'name'
-	/// </summary>
-	public string Name
-	{
-		get { return name; }
-		set { name = value; }
-	}
+	public string name { get; set; }
 
 	/// <summary>
 	/// ToString - override of 'ToString'
