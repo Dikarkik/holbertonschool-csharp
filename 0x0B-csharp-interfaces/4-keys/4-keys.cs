@@ -52,30 +52,10 @@ public class Key : Base, ICollectable
 	/// </summary>
 	/// <param name="name"></param>
 	/// <param name="isCollected"></param>
-	public Key(String name, bool isCollected)
+	public Key(String name="Key", bool isCollected=false)
 	{
 		this.name = name;
 		this.isCollected = isCollected;
-	}
-
-	/// <summary>
-	/// constructor
-	/// </summary>
-	/// <param name="isCollected"></param>
-	public Key(bool isCollected)
-	{
-		this.name = "Key";
-		this.isCollected = isCollected;
-	}
-
-	/// <summary>
-	/// constructor
-	/// </summary>
-	/// <param name="name"></param>
-	public Key(String name)
-	{
-		this.name = name;
-		this.isCollected = false;
 	}
 
 	/// <summary>
