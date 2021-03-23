@@ -58,56 +58,14 @@ public class Decoration : Base, IInteractive, IBreakable
 	/// <param name="name"></param>
 	/// <param name="durability"></param>
 	/// <param name="isQuestItem"></param>
-	public Decoration(String name, int durability, bool isQuestItem)
-	{
-		CheckDurability(durability);
-		this.name = name;
-		this.durability = durability;
-		this.isQuestItem = isQuestItem;
-	}
-
-	/// <summary>
-	/// contructor
-	/// </summary>
-	/// <param name="durability"></param>
-	/// <param name="isQuestItem"></param>
-	public Decoration(int durability, bool isQuestItem)
-	{
-		CheckDurability(durability);
-		this.name = "Decoration";
-		this.durability = durability;
-		this.isQuestItem = isQuestItem;
-	}
-
-	/// <summary>
-	/// contructor
-	/// </summary>
-	/// <param name="name"></param>
-	/// <param name="isQuestItem"></param>
-	public Decoration(String name, bool isQuestItem)
-	{
-		this.name = name;
-		this.durability = 1;
-		this.isQuestItem = isQuestItem;
-	}
-
-	/// <summary>
-	/// contructor
-	/// </summary>
-	/// <param name="name"></param>
-	/// <param name="durability"></param>
-	public Decoration(String name, int durability)
-	{
-		CheckDurability(durability);
-		this.name = name;
-		this.durability = durability;
-		this.isQuestItem = false;
-	}
-
-	private void CheckDurability(int durability)
+	public Decoration(String name = "Decoration", int durability = 1, bool isQuestItem = false)
 	{
 		if (durability <= 0)
 			throw new ArgumentException("Durability must be greater than 0");
+
+		this.name = name;
+		this.durability = durability;
+		this.isQuestItem = isQuestItem;
 	}
 
 	/// <summary>
