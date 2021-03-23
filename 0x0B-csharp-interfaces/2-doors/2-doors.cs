@@ -8,7 +8,7 @@ public abstract class Base
 	/// <summary>
 	/// name - public property
 	/// </summary>
-	public string name { get; set; } = "Door";
+	public string name { get; set; }
 
 	/// <summary>
 	/// ToString - override of 'ToString'
@@ -44,6 +44,14 @@ public class Door : Base, IInteractive
 {
 	/// <summary>
 	/// constructor
+	/// </summary>
+	public Door()
+	{
+		name = "Door";
+	}
+
+	/// <summary>
+	/// constructor with name
 	/// </summary>
 	/// <param name="n">name</param>
 	public Door(String n)
