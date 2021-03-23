@@ -13,7 +13,7 @@ public abstract class Base
 	/// <summary>
 	/// ToString - override of 'ToString'
 	/// </summary>
-	/// <returns></returns>
+	/// <returns>'name' is a 'type'</returns>
 	public override string ToString()
 	{
 		return $"{name} is a {this.GetType()}";
@@ -57,7 +57,7 @@ public class TestObject : Base, IInteractive, IBreakable, ICollectable
 	/// </summary>
 	public void Interact()
 	{
-		throw new NotImplementedException();
+		return;
 	}
 
 	/// <summary>
@@ -65,7 +65,7 @@ public class TestObject : Base, IInteractive, IBreakable, ICollectable
 	/// </summary>
 	public void Break()
 	{
-		throw new NotImplementedException();
+		return;
 	}
 
 	/// <summary>
@@ -73,6 +73,6 @@ public class TestObject : Base, IInteractive, IBreakable, ICollectable
 	/// </summary>
 	public void Collect()
 	{
-		throw new NotImplementedException();
+		return;
 	}
 }
