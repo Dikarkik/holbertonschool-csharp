@@ -67,10 +67,8 @@ public class RoomObjects
 					case "ICollectable":
 						typeof(ICollectable).InvokeMember("Collect", BindingFlags.InvokeMethod, null, roomObjects[i], null);
 						break;
-
 				}
 			}
-
 		}
 	}
 }
