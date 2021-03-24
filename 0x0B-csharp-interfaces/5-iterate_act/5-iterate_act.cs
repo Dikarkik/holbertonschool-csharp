@@ -46,6 +46,7 @@ public class RoomObjects
 {
 	/// <summary>
 	/// execute methods depending on what interface that item implements
+	/// https://stackoverflow.com/questions/7218785/invoke-non-static-method-by-name
 	/// </summary>
 	/// <param name="roomObjects"></param>
 	/// <param name="type"></param>
@@ -55,8 +56,21 @@ public class RoomObjects
 		{
 			if (type.IsAssignableFrom(roomObjects[i].GetType()))
 			{
-				Console.WriteLine("do work");
+				switch (type.Name)
+				{
+					case "IInteractive":
+						typeof(IInteractive).InvokeMember("Interact", BindingFlags.InvokeMethod, null, roomObjects[i], null);
+						break;
+					case "IBreakable":
+						typeof(IBreakable).InvokeMember("Break", BindingFlags.InvokeMethod, null, roomObjects[i], null);
+						break;
+					case "ICollectable":
+						typeof(ICollectable).InvokeMember("Collect", BindingFlags.InvokeMethod, null, roomObjects[i], null);
+						break;
+
+				}
 			}
+
 		}
 	}
 }
