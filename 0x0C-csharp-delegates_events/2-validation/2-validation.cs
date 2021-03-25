@@ -41,11 +41,11 @@ public class Player
 	/// <param name="damage"></param>
 	public void TakeDamage(float damage)
 	{
-		if (damage < 0)
-			damage = 0;
-
-		Console.WriteLine($"{this.name} takes {damage} damage!");
-		ValidateHP(this.hp -= damage);
+		if (damage > 0)
+		{
+			ValidateHP(this.hp -= damage);
+			Console.WriteLine($"{this.name} takes {damage} damage!");
+		}
 	}
 
 	/// <summary>
@@ -54,11 +54,11 @@ public class Player
 	/// <param name="heal"></param>
 	public void HealDamage(float heal)
 	{
-		if (heal < 0)
-			heal = 0;
-
-		Console.WriteLine($"{this.name} heals {heal} HP!");
-		ValidateHP(this.hp + heal);
+		if (heal > 0)
+		{
+			ValidateHP(this.hp + heal);
+			Console.WriteLine($"{this.name} heals {heal} HP!");
+		}
 	}
 
 	/// <summary>
