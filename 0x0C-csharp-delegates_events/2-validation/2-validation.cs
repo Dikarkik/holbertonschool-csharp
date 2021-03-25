@@ -43,7 +43,7 @@ public class Player
 	{
 		if (damage > 0)
 		{
-			ValidateHP(this.hp -= damage);
+			ValidateHP(this.hp - damage);
 			Console.WriteLine($"{this.name} takes {damage} damage!");
 		}
 	}
@@ -67,10 +67,10 @@ public class Player
 	/// <param name="newHp"></param>
 	public void ValidateHP(float newHp)
 	{
-		if (newHp > 100)
-			this.hp = 100;
-		else if (newHp < 0)
+		if (newHp < 0)
 			this.hp = 0;
+		else if (newHp > maxHp)
+			this.hp = maxHp;
 		else
 			this.hp = newHp;
 	}
